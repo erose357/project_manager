@@ -13,3 +13,21 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+div {
+  padding: 5px;
+}
+.contents {
+  padding: 5px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  height: 40px;
+}
+.header {
+  padding: 5px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  height: 40px;
+}

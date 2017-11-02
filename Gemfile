@@ -29,6 +29,7 @@ group :development, :test do
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'factory_bot_rails'
+  gem 'awesome_print'
 end
 
 group :development do
