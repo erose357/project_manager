@@ -1,7 +1,11 @@
 <body id="login-page">
   <div class="container">
-    <form class="form-sign-in">
-    <button class="btn-google"><%= link_to "Login with Google", '/auth/google', id: "login_google" %></button>
-    </form>
+    <div class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <%= button_to "Login with Google", '/auth/google', class: "btn btn-success btn-block btn-lg" %>
+        </div>
+      </div>
+    </div>
   </div>
 </body>

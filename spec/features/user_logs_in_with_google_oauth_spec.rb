@@ -11,9 +11,9 @@ RSpec.feature "User logs in" do
 
     expect(current_path).to eq("/login")
 
-    expect(page).to have_content("Login with Google")
+    expect(page).to have_button("Login with Google")
    
-    click_link "Login with Google"
+    click_button "Login with Google"
 
     expect(page).to have_content("Jeff Lebowski")
     expect(current_path).to eq(projects_path)
