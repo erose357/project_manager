@@ -9,12 +9,11 @@ RSpec.feature "Authenticated user" do
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
     visit '/projects'
-#I see my dashboard page
 
     expect(current_path).to eq(projects_path)
-#with a list of my projects 
+
     expect(page).to have_css(".project-name", count: 3)
-#and links to each project
+
     expect(page).to have_link(projects[0].name)
     expect(page).to have_link(projects[1].name)
     expect(page).to have_link(projects[2].name)
