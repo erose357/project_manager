@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :user_projects
+  has_many :projects, through: :user_projects
 
   def self.update_or_create(auth)
     user = User.find_by(uid: auth[:uid]) || User.new
