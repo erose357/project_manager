@@ -14,7 +14,7 @@ RSpec.describe User do
       credentials: {
         token: "abcdefghijk",
         refresh_token: "123456abcdefg",
-        expires_at: DateTime.now
+        expires_at: "Fri, 03 Nov 2017 19:12:41 -0600" 
       }
   }
       User.update_or_create(auth)
