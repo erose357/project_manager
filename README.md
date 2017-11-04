@@ -1,24 +1,21 @@
-# README
+# Project Manager 
+---
+[![Build Status](https://travis-ci.org/erose357/project_manager.svg?branch=master)](https://travis-ci.org/erose357/project_manager) 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Project Manager is a school project.  I'm trying to create a collaborative project management environment based on my experience in construction management.
 
 * Ruby version
+  2.4.1
+  Rails 5.1.4
 
-* System dependencies
+### To initialize the app locally:
 
-* Configuration
+`git clone https://github.com/erose357/project_manager`
 
 * Database creation
+  `rake db:{create,migrate}`
 
-* Database initialization
+* Testing with RSpec 
+  `rake db:test:prepare`
+  `bundle exec rspec`
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
