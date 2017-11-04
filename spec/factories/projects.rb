@@ -1,6 +1,11 @@
 FactoryBot.define do
   factory :project do
-    name "MyString"
-    location "MyString"
+    sequence :name do |n|
+      "Renovation #{n}"
+    end
+    street "1234 Street Blvd"
+    city "Disneyland"
+    state "CA"
+    zip 12345
   end
 end
