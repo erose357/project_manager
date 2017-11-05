@@ -1,6 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe User do
+  context "Validations" do
+    it { is_expected.to validate_presence_of(:provider) }
+    it { is_expected.to validate_presence_of(:uid) }
+    it { is_expected.to validate_uniqueness_of (:uid) }
+    it { is_expected.to validate_presence_of(:name) }
+    it { is_expected.to validate_presence_of(:token) }
+  end
+
   context "creates a user" do
     it "from google login" do
       auth = {

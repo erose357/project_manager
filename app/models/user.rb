@@ -2,6 +2,9 @@ class User < ApplicationRecord
   has_many :user_projects
   has_many :projects, through: :user_projects
 
+  validates_presence_of :provider, :uid, :name, :token
+  validates_uniqueness_of :uid
+
   def self.update_or_create(auth)
     user = User.find_by(uid: auth[:uid]) || User.new
     user.attributes = {
