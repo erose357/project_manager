@@ -24,4 +24,23 @@ RSpec.describe "Authenticated user" do
 
     expect(page).to have_link("Tenant Improvement")
   end
+
+  scenario "views project show page" do
+    user = create(:user)
+    projects = create_list(:project, 3)
+    user.projects << projects
+
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+    visit "/projects"
+
+    expect(current_path).to eq("/projects")
+    expect(page).to have_link(projects[0].name)
+    expect(page).to have_link(projects[1].name)
+    expect(page).to have_link(projects[2].name)
+
+    click_link "#{projects[1].name}"
+
+    expect(current_path).to eq(project_path(projects[1]))
+  end
 end
