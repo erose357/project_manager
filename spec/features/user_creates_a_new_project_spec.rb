@@ -1,8 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe "Authenticated user" do
+  let (:user) { create(:user) } 
+  let (:projects) { create_list(:project, 3) } 
+
   scenario "creates a new project" do
-    user = create(:user)
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
@@ -26,8 +28,6 @@ RSpec.describe "Authenticated user" do
   end
 
   scenario "views project show page" do
-    user = create(:user)
-    projects = create_list(:project, 3)
     user.projects << projects
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
@@ -42,5 +42,27 @@ RSpec.describe "Authenticated user" do
     click_link "#{projects[1].name}"
 
     expect(current_path).to eq(project_path(projects[1]))
+  end
+
+  scenario "clicks on badge link and gets redirected to projects path" do
+    user.projects << projects
+
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+    visit "/projects"
+
+    expect(current_path).to eq(projects_path)
+
+    click_on "#{projects[0].name}"
+
+    expect(current_path).to eq(project_path(projects[0]))
+
+    click_on "PM"
+
+    expect(current_path).to eq(projects_path)
+    expect(page).to have_content("My Projects")
+    expect(page).to have_link(projects[0].name)
+    expect(page).to have_link(projects[1].name)
+    expect(page).to have_link(projects[2].name)
   end
 end
