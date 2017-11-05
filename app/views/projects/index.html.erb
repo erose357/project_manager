@@ -2,6 +2,7 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <h3 class="panel-title">My Projects</h3>
+      <%= link_to "New Project", new_project_path, class: "btn btn-success" %>
     </div>
     <div class="panel-body">
       <% @projects.each do |project| %>
