@@ -16,10 +16,39 @@
       <p class="text-right"><%= @project.revised_sf %></p>
     </div>
   </div>
-
   <div class="row">
     <div class="col-md-3 show">
       <p>Square Footage for Parking/Landscaping:</p>
+    </div>
+    <div class="col-md-1 show">
+      <p class="text-right"><%= @project.orig_lf_sf %></p>
+    </div>
+    <div class="col-md-1 show">
+      <p class="text-right"><%= @project.rev_lf_sf %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3 show-heading">
+      <h5 class="text-center"><b>Category</b></h5>
+    </div>
+    <div class="col-md-1 show-heading">
+      <h5 class="text-center"><b>Original Budget</b></h5>
+    </div>
+    <div class="col-md-1 show-heading">
+      <h5 class="text-center"><b>Revised Budget</b></h5>
+    </div>
+    <div class="col-md-4 show-heading">
+      <h5 class="text-center"><b>Estimated Costs</b></h5>
+      <p class="text-center">Bid Award &nbsp&nbsp&nbsp&nbsp Bids Expected &nbsp&nbsp&nbsp&nbsp Change Order &nbsp&nbsp&nbsp&nbsp Total</p>
+    </div>
+    <div class="col-md-1 show-heading">
+      <h5 class="text-center"><b>Remaining Budget</b></h5>
+    </div>
+
+
+    <div class="col-md-2 show-heading">
+      <h5 class="text-center"><b>Requisitioned Costs</b></h5>
+      <p class="text-center">Invoiced &nbsp&nbsp&nbsp&nbsp&nbsp Balance</p>
     </div>
   </div>
 

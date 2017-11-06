@@ -34,8 +34,14 @@
 .show {
   border-color: black;
   border-style: solid;
-  border-width: .5px;
-  margin: 1px;
+  border-width: 1px;
+  margin: .5px;
+}
+.show-heading {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  margin: 1px 0 1px 0;
 }
 #welcome-page {
   padding-top: 50px;
