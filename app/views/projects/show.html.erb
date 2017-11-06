@@ -1,0 +1,26 @@
+<div class="container mainbox">
+
+  <div class="row">
+    <div class="col-md-12 show">
+      <p><b>Project Description:</b> <%= "#{@project.name}  -  #{@project.address}" %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3 show">
+      <p>Square Footage to be Built/Renovated:</p>
+    </div>
+    <div class="col-md-1 show">
+      <p class="text-right"><%= @project.original_sf %></p>
+    </div>
+    <div class="col-md-1 show">
+      <p class="text-right"><%= @project.revised_sf %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 show">
+      <p>Square Footage for Parking/Landscaping:</p>
+    </div>
+  </div>
+
+</div>
