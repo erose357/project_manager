@@ -42,7 +42,7 @@ RSpec.describe "Projects show page" do
     expect(page).to have_content("Purchase Price")
     expect(page).to have_content("Closing Costs")
     expect(page).to have_content("Other")
-    expect(page).to have_content("Subtotal: Purchase")
+    expect(page).to have_content("Subtotal Purchase")
     expect(page).to have_content("Cost per square foot")
   end
 
@@ -63,7 +63,7 @@ RSpec.describe "Projects show page" do
     expect(page).to have_content("Exterior Painting or Resurfacing($2.00/sf)")
     expect(page).to have_content("Soft Costs(10%)")
     expect(page).to have_content("Other")
-    expect(page).to have_content("Subtotal: Construction/Renovation")
+    expect(page).to have_content("Subtotal Construction/Renovation")
     expect(page).to have_content("Cost per square foot")
   end
 
