@@ -42,7 +42,7 @@ RSpec.describe "Projects show page" do
     expect(page).to have_content("Purchase Price")
     expect(page).to have_content("Closing Costs")
     expect(page).to have_content("Other")
-    expect(page).to have_content("Sub-Total: Purchase")
+    expect(page).to have_content("Subtotal: Purchase")
     expect(page).to have_content("Cost per square foot")
   end
 
@@ -63,7 +63,7 @@ RSpec.describe "Projects show page" do
     expect(page).to have_content("Exterior Painting or Resurfacing($2.00/sf)")
     expect(page).to have_content("Soft Costs(10%)")
     expect(page).to have_content("Other")
-    expect(page).to have_content("Sub-Total: Construction/Renovation")
+    expect(page).to have_content("Subtotal: Construction/Renovation")
     expect(page).to have_content("Cost per square foot")
   end
 
@@ -83,7 +83,24 @@ RSpec.describe "Projects show page" do
     expect(page).to have_content("Office Equip")
     expect(page).to have_content("Misc")
     expect(page).to have_content("Other")
-    expect(page).to have_content("Sub-Total FFE")
+    expect(page).to have_content("Subtotal FFE")
+    expect(page).to have_content("Cost per square foot")
+  end
+
+  scenario "user sees subtotal and project summary costs" do
+    user.projects << projects
+
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+    visit "/projects/#{projects[2].id}"
+
+    expect(current_path).to eq(project_path(projects[2].id))
+    expect(page).to have_content("Subtotal Const/Renovation/FFE Costs")
+    expect(page).to have_content("Cost per square foot")
+    expect(page).to have_content("Subtotal Purchase Costs")
+    expect(page).to have_content("Subtotal Const/Renovation/FEE Costs")
+    expect(page).to have_content("Project Contingency(15% Const&FFE")
+    expect(page).to have_content("Total Project Costs")
     expect(page).to have_content("Cost per square foot")
   end
 end
