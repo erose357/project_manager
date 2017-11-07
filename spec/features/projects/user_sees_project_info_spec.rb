@@ -64,7 +64,27 @@ RSpec.describe "Projects show page" do
     expect(page).to have_content("Soft Costs(10%)")
     expect(page).to have_content("Other")
     expect(page).to have_content("Sub-Total: Construction/Renovation")
-    expect(page).to have_content("Cost per square foot", count: 2)
+    expect(page).to have_content("Cost per square foot")
+  end
+
+  scenario "user sees FFE costs" do
+    user.projects << projects
+
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+    visit "/projects/#{projects[0].id}"
+
+    expect(current_path).to eq(project_path(projects[0].id))
+    expect(page).to have_content("Furniture, Fixt, & Equip(Cost per sf)")
+    expect(page).to have_content("AV Cabling & Equip")
+    expect(page).to have_content("Signage")
+    expect(page).to have_content("Security")
+    expect(page).to have_content("Kitchen Equip")
+    expect(page).to have_content("Office Equip")
+    expect(page).to have_content("Misc")
+    expect(page).to have_content("Other")
+    expect(page).to have_content("Sub-Total FFE")
+    expect(page).to have_content("Cost per square foot")
   end
 end
 
