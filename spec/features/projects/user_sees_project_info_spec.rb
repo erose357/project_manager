@@ -28,7 +28,22 @@ RSpec.describe "Projects show page" do
     expect(page).to have_content("Requisitioned Costs")
     expect(page).to have_content("Invoiced")
     expect(page).to have_content("Balance")
-    #category, original budget, revised budget, estimated costs(bid award, bids expected, change order, total), remaining budget, requisitioned costs(invoiced to date, balance due)
+  end
+
+  scenario "user sees project costs section" do
+    user.projects << projects
+
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+    visit "/projects/#{projects[1].id}"
+
+    expect(current_path).to eq(project_path(projects[1].id))
+    expect(page).to have_content("Purchase Costs")
+    expect(page).to have_content("Purchase Price")
+    expect(page).to have_content("Closing Costs")
+    expect(page).to have_content("Other")
+    expect(page).to have_content("Sub-Total: Purchase Costs")
+    expect(page).to have_content("Cost per square foot")
   end
 end
 
