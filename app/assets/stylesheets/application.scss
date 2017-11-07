@@ -32,16 +32,51 @@
   //height: 40px;
 //}
 .show {
-  border-color: black;
-  border-style: solid;
+  //border-color: black;
+  //border-style: solid;
   border-width: 1px;
   margin: .5px;
 }
 .show-heading {
-  border-color: black;
-  border-style: solid;
+  //border-color: black;
+  //border-style: solid;
   border-width: 1px;
   margin: 1px 0 1px 0;
+  height: 70px;
+}
+div .show-heading {
+  padding: 5px;
+}
+div .col-md-3.est-cost {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.frame {
+  margin: 1px;
+  height: 100%;
+  width: 100%;
+  background-color: lightgray;
+  padding-top: 2px;
+  //border-color: black;
+  //border-style: solid;
+}
+.inner_frame {
+  //border-color: black;
+  //border-style: solid;
+  background-color: whitesmoke;
+  padding-left: 1px;
+  padding-right: 1px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.inner_row {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.right-inner-border {
+  border-right-style: solid;
+  border-right-width: medium;
+  border-right-color: lightgray;
 }
 #welcome-page {
   padding-top: 50px;

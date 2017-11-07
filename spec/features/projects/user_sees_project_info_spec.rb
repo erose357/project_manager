@@ -21,13 +21,13 @@ RSpec.describe "Projects show page" do
     expect(page).to have_content("Revised Budget")
     expect(page).to have_content("Estimated Costs")
     expect(page).to have_content("Bid Award")
-    expect(page).to have_content("Bids Expected")
-    expect(page).to have_content("Change Order")
+    expect(page).to have_content("Bids Est")
+    expect(page).to have_content("Chg Ord")
     expect(page).to have_content("Total")
     expect(page).to have_content("Remaining Budget")
-    expect(page).to have_content("Requisitined Costs")
-    expect(page).to have_content("Invoiced to Date")
-    expect(page).to have_content("Balance Due")
+    expect(page).to have_content("Requisitioned Costs")
+    expect(page).to have_content("Invoiced")
+    expect(page).to have_content("Balance")
     #category, original budget, revised budget, estimated costs(bid award, bids expected, change order, total), remaining budget, requisitioned costs(invoiced to date, balance due)
   end
 end
