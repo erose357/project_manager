@@ -1,0 +1,1000 @@
+<div class="container mainbox">
+  <div class="row">
+    <div class="col-md-12 show">
+      <p><b>Project Description:</b> <%= "#{@project.name}  -  #{@project.address}" %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3 show">
+      <p>Square Footage to be Built/Renovated:</p>
+    </div>
+    <div class="col-md-1 show">
+      <p class="text-right"><%= @project.original_sf %></p>
+    </div>
+    <div class="col-md-1 show">
+      <p class="text-right"><%= @project.revised_sf %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3 show">
+      <p>Square Footage for Parking/Landscaping:</p>
+    </div>
+    <div class="col-md-1 show">
+      <p class="text-right"><%= @project.orig_lf_sf %></p>
+    </div>
+    <div class="col-md-1 show">
+      <p class="text-right"><%= @project.rev_lf_sf %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3 show-heading">
+      <div class="frame">
+        <h5 class="text-center"><b>Category</b></h5>
+      </div>
+    </div>
+    <div class="col-md-1 show-heading">
+      <div class="frame">
+        <h5 class="text-center"><b>Original Budget</b></h5>
+      </div>
+    </div>
+    <div class="col-md-1 show-heading">
+      <div class="frame">
+        <h5 class="text-center"><b>Revised Budget</b></h5>
+      </div>
+    </div>
+    <div class="col-md-4 show-heading">
+      <div class="frame">
+      <h5 class="text-center"><b>Estimated Costs</b></h5>
+      <div class="row inner_row">
+        <div class="col-md-3 est-cost text-center inner_frame right-inner-border">Bid Award</div>
+        <div class="col-md-3 est-cost text-center inner_frame right-inner-border">Bids Est</div>
+        <div class="col-md-3 est-cost text-center inner_frame right-inner-border">Chg Ord</div>
+        <div class="col-md-3 est-cost text-center inner_frame">Total</div>
+      </div>
+      </div>
+    </div>
+    <div class="col-md-1 show-heading">
+      <div class="frame">
+        <h5 class="text-center"><b>Remaining Budget</b></h5>
+      </div>
+    </div>
+    <div class="col-md-2 show-heading">
+      <div class="frame">
+        <h5 class="text-center"><b>Requisitioned Costs</b></h5>
+        <div class="row inner_row">
+          <div class="col-md-6 text-center inner_frame right-inner-border">Invoiced</div>
+          <div class="col-md-6 text-center inner_frame">Balance</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row highlight">
+    <div class="col-md-3">
+        <p class="text-left"><b>Purchase Costs</b></p>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p class="text-left">Purchase Price</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p class="text-left">Closing Costs(3% of purchase price)</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p class="text-left">Other</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row highlight">
+    <div class="col-md-3">
+      <p class="text-left"><h5>Subtotal Purchase</h5></p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row highlight">
+    <div class="col-md-3">
+      <p class="text-left">Cost per square foot</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row section-highlight">
+    <div class="col-md-3">
+      <p class="text-left"><b>Construction/Renovation(Cost per sf)</b></p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p class="text-left">Build-out Type:</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p class="text-left">Finishes($10/sf)</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p class="text-left">New HVAC(if needed, $15/sf)</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p class="text-left">Elevator(if needed)</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p class="text-left">Exterior Parking and Landscaping</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p class="text-left">Exterior Painting or Resurfacing($2.00/sf)</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p class="text-left">Soft Costs(10%)</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row highlight">
+    <div class="col-md-3">
+      <h5 class="text-left">Subtotal Construction/Renovation</h5>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row highlight">
+    <div class="col-md-3">
+      <p class="text-left">Cost per square foot</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row section-highlight">
+    <div class="col-md-3">
+      <p class="text-left"><b>Furniture, Fixt, & Equip(Cost per sf)</b></p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p class="text-left">AV Cabling & Equip</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p class="text-left">Signage</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p class="text-left">Security</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p class="text-left">Kitchen Equip</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p class="text-left">Office Equip</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p class="text-left">Misc</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row highlight">
+    <div class="col-md-3">
+      <h5 class="text-left">Subtotal FFE</h5>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row highlight">
+    <div class="col-md-3">
+      <p class="text-left">Cost per square foot</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row section-highlight">
+    <div class="col-md-3">
+      <h5 class="text-left">Subtotal Const/Renovation/FFE Costs</h5>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row highlight">
+    <div class="col-md-3">
+      <p class="text-left">Cost per square foot</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row section-highlight">
+    <div class="col-md-3">
+      <h5 class="text-left"><b>Project Summary</b></h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p class="text-left">Subtotal Purchase Costs</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <p class="text-left">Subtotal Const/Renovation/FEE Costs</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row highlight">
+    <div class="col-md-3">
+      <p class="text-left">Project Contingency(15% Const&FFE)</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+  <div class="row highlight">
+    <div class="col-md-3">
+      <p class="text-left"><b>Total Project Costs</b></p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+    <div class="col-md-1">
+      <p class="text-right">0</p>
+    </div>
+  </div>
+</div>

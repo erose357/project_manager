@@ -1,16 +1,18 @@
-<div class="container mainbox">
-  <div class="row">
-    <div class="col-md-offset-3 col-md-6">
-      <div class="panel panel-default">
-        <div class="panel-heading clearfix">
-          <%= link_to "New Project", new_project_path, class: "btn btn-success pull-right" %>
-          <h2 class="panel-title">My Projects</h2>
+<body id="window">
+  <div class="container mainbox">
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading clearfix">
+            <%= link_to "New Project", new_project_path, class: "btn btn-success pull-right" %>
+            <h2 class="panel-title">My Projects</h2>
+          </div>
+          <div class="panel-body">
+            <% @projects.each do |project| %>
+              <p><%= link_to project.name, project_path(project), class: "project-name" %></p>
+            <% end %>
+          </div>
         </div>
-        <div class="panel-body">
-          <% @projects.each do |project| %>
-            <p><%= link_to project.name, project_path(project), class: "project-name" %></p>
-          <% end %>
-        </div>
-      </div>
+    </div>
   </div>
-</div>
+</body>

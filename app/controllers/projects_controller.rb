@@ -20,6 +20,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @project = Project.find(params[:id])
   end
 
   private
@@ -28,3 +29,4 @@ class ProjectsController < ApplicationController
     params.require(:project).permit(:name, :street, :city, :state, :zip)
   end
 end
+
