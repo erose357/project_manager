@@ -16,8 +16,9 @@ RSpec.describe "Authenticated User" do
 
     click_on "Weather"
 
-    expect(current_path).to eq(weather_index_path)
+    expect(current_path).to eq(project_weather_index_path(project.id))
     expect(page).to have_css(".weekday")
+    expect(page).to have_css(".city")
     expect(page).to have_css(".date")
     expect(page).to have_css(".high")
     expect(page).to have_css(".low")

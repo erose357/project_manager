@@ -20,6 +20,7 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'database_cleaner'
 gem 'figaro'
+gem 'faraday'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
