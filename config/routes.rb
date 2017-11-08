@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
 
   resources :projects, only: [:index, :new, :create, :show]
+  resources :weather, only: [:index]
 end

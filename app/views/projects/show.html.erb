@@ -1,4 +1,8 @@
 <div class="container mainbox">
+<ul class="nav nav-tabs">
+  <li role="presentation"><%= link_to "#{@project.name}", project_path(@project) %></li>
+  <li role="presentation"><%= link_to "Weather", weather_index_path %></li>
+</ul>
   <div class="row">
     <div class="col-md-12 show">
       <p><b>Project Description:</b> <%= "#{@project.name}  -  #{@project.address}" %></p>
