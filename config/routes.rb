@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 
   resources :projects, only: [:index, :new, :create, :show] do
     resources :weather, only: [:index]
+    resources :original_budget, only: [:new, :create]
   end
 end
