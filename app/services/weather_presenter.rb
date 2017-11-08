@@ -4,13 +4,7 @@ class WeatherPresenter
   end
 
   def get_forecast
-    response = Faraday.get("http://api.wunderground.com/api/#{ENV['weather_api_key']}/forecast10day/q/80215.json")    
-
-    raw_data = JSON.parse(response.body, symbolize_names: true)[:forecast][:simpleforecast][:forecastday]
-
-    @weather = raw_data.map do |data|
-      Forecast.new(data)
-    end
+    api.ten_day_forecast(project.zip).map { |data| Forecast.new(data) }
   end
 
   def project
@@ -19,4 +13,8 @@ class WeatherPresenter
 
   private
     attr_reader :project_id
+
+    def api
+      WeatherService.new
+    end
 end

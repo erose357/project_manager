@@ -6,6 +6,6 @@ FactoryBot.define do
     street "1234 Street Blvd"
     city "Disneyland"
     state "CA"
-    zip 12345
+    zip 92799 
   end
 end
