@@ -1,11 +1,11 @@
 <body id="weather-page">
   <ul class="nav nav-tabs">
-    <li role="presentation"><%= link_to "#{@project.name}", project_path(@project) %></li>
+    <li role="presentation"><%= link_to "#{@weather.project.name}", project_path(@weather.project) %></li>
   </ul>
   <div class="container mainbox">
-    <h1 class="text-center fancy city"><%= @weather.first.city %> - 10 Day Forecast</h1>
+    <h1 class="text-center fancy city"><%= @weather.get_forecast.first.city %> - 10 Day Forecast</h1>
     <div class="row">
-    <% @weather.each do |day| %>
+    <% @weather.get_forecast.each do |day| %>
       <div class="col-sm-2">
         <div class="thumbnail">
           <%= image_tag(day.icon_url) %>
