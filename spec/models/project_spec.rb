@@ -13,7 +13,7 @@ RSpec.describe Project, type: :model do
 
   describe "Instance methods" do
     it "#address" do
-      expect(project.address).to eq("1234 Street Blvd, Disneyland, CA 12345")
+      expect(project.address).to eq("1234 Street Blvd, Disneyland, CA 92799")
     end
   end
 end

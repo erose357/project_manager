@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   get '/auth/:provider/callback', to: 'sessions#create'
 
-  resources :projects, only: [:index, :new, :create, :show]
+  resources :projects, only: [:index, :new, :create, :show] do
+    resources :weather, only: [:index]
+  end
 end

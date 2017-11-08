@@ -1,0 +1,24 @@
+<body id="weather-page">
+  <ul class="nav nav-tabs">
+    <li role="presentation"><%= link_to "#{@weather.project.name}", project_path(@weather.project) %></li>
+  </ul>
+  <div class="container mainbox">
+    <h1 class="text-center fancy city"><%= @weather.get_forecast.first.city %> - 10 Day Forecast</h1>
+    <div class="row">
+    <% @weather.get_forecast.each do |day| %>
+      <div class="col-sm-2">
+        <div class="thumbnail">
+          <%= image_tag(day.icon_url) %>
+          <div class="caption">
+            <h5 class="text-center bg-info weekday"><%= day.weekday %></h6>
+            <h6 class="text-center date"><%= day.date %></h6>
+            <p class="text-center conditions"><%= day.conditions %></p>
+            <p class="text-center high">High: <%= day.high %></p>
+            <p class="text-center low">Low: <%= day.low %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</body>

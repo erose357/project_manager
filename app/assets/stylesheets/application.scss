@@ -64,14 +64,23 @@ div .col-md-3.est-cost {
   background-color: #ffffb3;
   margin-top: 10px;
 }
-//.underline {
-  //border-bottom-style: dotted;
-  //border-bottom-width: 1px;
-  //border-bottom-color: black;
-//}
+.fancy {
+  font-family: monospace;
+}
 #welcome-page {
   padding-top: 50px;
   background: url('https://i.imgur.com/TGLyQQX.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#weather-page {
+  padding-top: 50px;
+  background: url('https://i.imgur.com/tZYV70u.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
