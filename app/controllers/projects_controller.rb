@@ -11,6 +11,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     if @project.save
       current_user.projects << @project
+      OriginalBudget.create!({project_id: @project.id})
       flash[:success] = "#{@project.name} Created!"
       redirect_to projects_path
     else
