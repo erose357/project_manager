@@ -2,18 +2,20 @@ require 'rails_helper'
 
 RSpec.describe "Projects show page" do
   let (:user) { create(:user) }
-  let (:projects) { create_list(:project, 3) }
+  let (:project) { create(:project) }
+  let (:original_budget) { create(:original_budget, project_id: project.id) }
 
   scenario "user sees project info header on show page" do
-    user.projects << projects
+    original_budget
+    user.projects << project
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-    visit "/projects/#{projects[1].id}"
+    visit "/projects/#{project.id}"
 
     expect(page).to have_content("Project Description")
-    expect(page).to have_content(projects[1].name)
-    expect(page).to have_content(projects[1].address)
+    expect(page).to have_content(project.name)
+    expect(page).to have_content(project.address)
     expect(page).to have_content("Square Footage to be Built/Renovated:")
     expect(page).to have_content("Square Footage for Parking/Landscaping")
     expect(page).to have_content("Category")
@@ -31,13 +33,14 @@ RSpec.describe "Projects show page" do
   end
 
   scenario "user sees project costs section" do
-    user.projects << projects
+    original_budget
+    user.projects << project
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-    visit "/projects/#{projects[1].id}"
+    visit "/projects/#{project.id}"
 
-    expect(current_path).to eq(project_path(projects[1].id))
+    expect(current_path).to eq(project_path(project.id))
     expect(page).to have_content("Purchase Costs")
     expect(page).to have_content("Purchase Price")
     expect(page).to have_content("Closing Costs")
@@ -47,13 +50,14 @@ RSpec.describe "Projects show page" do
   end
 
   scenario "user sees construction/renovation costs" do
-    user.projects << projects
+    original_budget
+    user.projects << project
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-    visit "/projects/#{projects[1].id}"
+    visit "/projects/#{project.id}"
 
-    expect(current_path).to eq(project_path(projects[1].id))
+    expect(current_path).to eq(project_path(project.id))
     expect(page).to have_content("Construction/Renovation(Cost per sf")
     expect(page).to have_content("Build-out Type:")
     expect(page).to have_content("Finishes($10/sf")
@@ -68,13 +72,14 @@ RSpec.describe "Projects show page" do
   end
 
   scenario "user sees FFE costs" do
-    user.projects << projects
+    original_budget
+    user.projects << project
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-    visit "/projects/#{projects[0].id}"
+    visit "/projects/#{project.id}"
 
-    expect(current_path).to eq(project_path(projects[0].id))
+    expect(current_path).to eq(project_path(project.id))
     expect(page).to have_content("Furniture, Fixt, & Equip(Cost per sf)")
     expect(page).to have_content("AV Cabling & Equip")
     expect(page).to have_content("Signage")
@@ -88,13 +93,14 @@ RSpec.describe "Projects show page" do
   end
 
   scenario "user sees subtotal and project summary costs" do
-    user.projects << projects
+    original_budget
+    user.projects << project
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-    visit "/projects/#{projects[2].id}"
+    visit "/projects/#{project.id}"
 
-    expect(current_path).to eq(project_path(projects[2].id))
+    expect(current_path).to eq(project_path(project.id))
     expect(page).to have_content("Subtotal Const/Renovation/FFE Costs")
     expect(page).to have_content("Cost per square foot")
     expect(page).to have_content("Subtotal Purchase Costs")

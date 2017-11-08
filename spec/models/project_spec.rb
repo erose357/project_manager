@@ -9,6 +9,7 @@ RSpec.describe Project, type: :model do
 
   describe "Associations" do
     it { is_expected.to have_many(:users) }
+    it { is_expected.to have_one(:original_budget) }
   end
 
   describe "Instance methods" do

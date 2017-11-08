@@ -2,7 +2,7 @@
 <ul class="nav nav-tabs">
   <li role="presentation"><%= link_to "Projects", projects_path %></li>
   <li role="presentation"><%= link_to "Weather", project_weather_index_path(@project)%></li>
-  <li role="presentation"><%= link_to "Original Budget", new_project_original_budget_path(@project) %>
+  <li role="presentation"><%= link_to "Original Budget", edit_project_original_budget_path(@project, @project.original_budget) %>
 </ul>
   <div class="row">
     <div class="col-md-12 show">
@@ -14,10 +14,10 @@
       <p>Square Footage to be Built/Renovated:</p>
     </div>
     <div class="col-md-1 show">
-      <p class="text-right"><%= @project.original_sf %></p>
+      <p class="text-right"><%= number_with_delimiter(@project.original_budget.sf_construction)%></p>
     </div>
     <div class="col-md-1 show">
-      <p class="text-right"><%= @project.revised_sf %></p>
+      <p class="text-right">0</p>
     </div>
   </div>
   <div class="row">
@@ -25,10 +25,10 @@
       <p>Square Footage for Parking/Landscaping:</p>
     </div>
     <div class="col-md-1 show">
-      <p class="text-right"><%= @project.orig_lf_sf %></p>
+      <p class="text-right"><%= number_with_delimiter(@project.original_budget.sf_landscape) %></p>
     </div>
     <div class="col-md-1 show">
-      <p class="text-right"><%= @project.rev_lf_sf %></p>
+      <p class="text-right">0</p>
     </div>
   </div>
   <div class="row">
@@ -84,7 +84,7 @@
       <p class="text-left">Purchase Price</p>
     </div>
     <div class="col-md-1">
-      <p class="text-right">0</p>
+      <p class="text-right smallfont"><%= number_with_delimiter((@project.original_budget.purchase_price).to_i) %></p>
     </div>
     <div class="col-md-1">
       <p class="text-right">0</p>
@@ -116,7 +116,7 @@
       <p class="text-left">Closing Costs(3% of purchase price)</p>
     </div>
     <div class="col-md-1">
-      <p class="text-right">0</p>
+      <p class="text-right smallfont"><%= number_with_delimiter((@project.original_budget.closing_costs).to_i) %></p>
     </div>
     <div class="col-md-1">
       <p class="text-right">0</p>
@@ -148,7 +148,7 @@
       <p class="text-left">Other</p>
     </div>
     <div class="col-md-1">
-      <p class="text-right">0</p>
+      <p class="text-right smallfont">0</p>
     </div>
     <div class="col-md-1">
       <p class="text-right">0</p>
@@ -180,7 +180,7 @@
       <p class="text-left"><h5>Subtotal Purchase</h5></p>
     </div>
     <div class="col-md-1">
-      <p class="text-right">0</p>
+      <p class="text-right smallfont"><%= number_with_delimiter((@project.original_budget.subtotal_purchase).to_i) %></p>
     </div>
     <div class="col-md-1">
       <p class="text-right">0</p>
@@ -212,7 +212,7 @@
       <p class="text-left">Cost per square foot</p>
     </div>
     <div class="col-md-1">
-      <p class="text-right">0</p>
+      <p class="text-right smallfont"><%= number_with_delimiter((@project.original_budget.purchase_cost_per_sf).to_i) %></p>
     </div>
     <div class="col-md-1">
       <p class="text-right">0</p>

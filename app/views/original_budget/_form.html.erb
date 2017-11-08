@@ -1,4 +1,4 @@
-<%= form_for [@project, @original_budget], url: project_original_budget_index_path(@project), :html => {class: "form-horizontal", role: "form"} do |f| %>
+<%= form_for [@project, @project.original_budget], url: project_original_budget_path(@project, @project.original_budget), :html => {class: "form-horizontal", role: "form"} do |f| %>
   <div class="form-group">
   <div class="form-group">
     <%= f.label :purchase_price, "Purchase Price", class: "col-md-5 control-label" %>
@@ -9,13 +9,13 @@
   <div class="form-group">
     <%= f.label :sf_construction, "SF for Construction", class: "col-md-5 control-label" %>
     <div class="col-md-5">
-      <%= f.text_field :sf_construction, class: "form-control" %>
+      <%= f.text_field :sf_construction, value: number_with_delimiter(f.object.sf_construction), class: "form-control" %>
     </div>
   </div>
   <div class="form-group">
     <%= f.label :sf_landscape, "SF for Landscaping", class: "col-md-5 control-label" %>
     <div class="col-md-5">
-      <%= f.text_field :sf_landscape, class: "form-control" %>
+      <%= f.text_field :sf_landscape, values: number_with_delimiter(f.object.sf_landscape), class: "form-control" %>
     </div>
   </div>
   <div class="col-md-offset-3 col-md-5">

@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe "Authenticated user" do
   let (:user) { create(:user) } 
-  let (:projects) { create_list(:project, 3) } 
+  let (:project) { create(:project) } 
+  let (:original_budget) { create(:original_budget, project_id: project.id) }
 
   scenario "creates a new project" do
 
@@ -28,24 +29,26 @@ RSpec.describe "Authenticated user" do
   end
 
   scenario "views project show page" do
-    user.projects << projects
+    original_budget
+    user.projects << project
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
     visit "/projects"
 
     expect(current_path).to eq("/projects")
-    expect(page).to have_link(projects[0].name)
-    expect(page).to have_link(projects[1].name)
-    expect(page).to have_link(projects[2].name)
+    expect(page).to have_link(project.name)
+    expect(page).to have_link(project.name)
+    expect(page).to have_link(project.name)
 
-    click_link "#{projects[1].name}"
+    click_link "#{project.name}"
 
-    expect(current_path).to eq(project_path(projects[1]))
+    expect(current_path).to eq(project_path(project))
   end
 
   scenario "clicks on badge link and gets redirected to projects path" do
-    user.projects << projects
+    original_budget
+    user.projects << project
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
@@ -53,16 +56,16 @@ RSpec.describe "Authenticated user" do
 
     expect(current_path).to eq(projects_path)
 
-    click_on "#{projects[0].name}"
+    click_on "#{project.name}"
 
-    expect(current_path).to eq(project_path(projects[0]))
+    expect(current_path).to eq(project_path(project))
 
     click_on "PM"
 
     expect(current_path).to eq(projects_path)
     expect(page).to have_content("My Projects")
-    expect(page).to have_link(projects[0].name)
-    expect(page).to have_link(projects[1].name)
-    expect(page).to have_link(projects[2].name)
+    expect(page).to have_link(project.name)
+    expect(page).to have_link(project.name)
+    expect(page).to have_link(project.name)
   end
 end

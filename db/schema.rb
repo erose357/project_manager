@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171108140400) do
+ActiveRecord::Schema.define(version: 20171108171935) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "original_budgets", force: :cascade do |t|
-    t.integer "purchase_price"
-    t.integer "sf_construction"
-    t.integer "sf_landscape"
+    t.integer "purchase_price", default: 0, null: false
+    t.integer "sf_construction", default: 0, null: false
+    t.integer "sf_landscape", default: 0, null: false
     t.bigint "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

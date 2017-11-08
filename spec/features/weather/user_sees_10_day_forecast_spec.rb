@@ -2,11 +2,12 @@ require 'rails_helper'
 
 RSpec.describe "Authenticated User" do
   let (:user) { create(:user) }
-  let (:projects) { create_list(:project) }
   let (:project) { create(:project) }
+  let (:original_budget) { create(:original_budget, project_id: project.id) }
 
   scenario "sees 10 day forecast" do
     VCR.use_cassette("weather") do
+      original_budget
       user.projects << project
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
